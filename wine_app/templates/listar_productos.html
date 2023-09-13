@@ -1,0 +1,21 @@
+{% extends 'padre.html' %}
+
+
+{% block tituloCambia %}
+<title>Inicio</title>
+{% endblock tituloCambia %}
+
+{% block contenidoQueCambia %}
+<body>
+
+    <ul>
+       
+        {% for producto in listar_productos %}
+            <li>{{producto.bodega}} {{producto.etiqueta}} {{producto.precio}}</li>
+        {% endfor %}
+            
+    </ul>
+    
+</body>
+
+{% endblock contenidoQueCambia %}

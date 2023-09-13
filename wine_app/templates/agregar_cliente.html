@@ -1,0 +1,20 @@
+{% extends 'padre.html' %}
+
+
+{% block tituloCambia %}
+<title>agregar cliente</title>
+{% endblock tituloCambia %}
+
+{% block contenidoQueCambia %}
+
+    <form action="{% url 'agregar_cliente' %}" method="post">{% csrf_token %}
+        <p>Nombre: <input type="text" name="nombre"></p>
+        <p>Apellido: <input type="text" name="apellido"></p>
+        <p>dni: <input type="number" name="dni"></p>
+        <p>mail: <input type="email" name="mail"></p>
+
+        <button type="submit"> Enviar </button>
+    </form>
+
+
+{% endblock contenidoQueCambia %}

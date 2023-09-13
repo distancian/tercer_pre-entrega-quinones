@@ -1,0 +1,19 @@
+{% extends 'padre.html' %}
+
+
+{% block tituloCambia %}
+<title>agregar producto</title>
+{% endblock tituloCambia %}
+
+{% block contenidoQueCambia %}
+
+<form action="{% url 'agregar_producto' %}" method="post">{% csrf_token %}
+    <p>bodega: <input type="text" name="bodega"></p>
+    <p>etiqueta: <input type="text" name="etiqueta"></p>
+    <p>precio: <input type="number" name="precio"></p>
+
+    <button type="submit"> Enviar </button>
+</form>
+
+
+{% endblock contenidoQueCambia %}
