@@ -13,6 +13,8 @@ class Clientes(models.Model):
     class Meta():
         verbose_name = 'Cliente'
         verbose_name_plural = 'clientes'
+        ordering = ('nombre', 'apellido', 'dni', 'mail')
+        unique_together = ('nombre', 'dni')
 
 class Vendedores(models.Model):
     nombre = models.CharField(max_length=40)
@@ -25,6 +27,9 @@ class Vendedores(models.Model):
     class Meta():
         verbose_name = 'Vendedor'
         verbose_name_plural = 'Vendedores'    
+        ordering = ('nombre',)
+        unique_together = ('legajo',)
+        
 
 class Productos(models.Model):
     bodega = models.CharField(max_length=40)
@@ -37,3 +42,5 @@ class Productos(models.Model):
     class Meta():
         verbose_name = 'Producto'
         verbose_name_plural = 'Productos'  
+        ordering = ('bodega',)
+        unique_together = ('bodega', 'etiqueta')

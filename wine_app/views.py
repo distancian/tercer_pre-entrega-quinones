@@ -84,4 +84,17 @@ def listar_vendedores(req):
     return render(req, "listar_vendedores.html", {"listar_vendedores": lista})
 
 
+################### funciones busqueda  #########################
 
+def busquedaProducto(req):
+    return render (req, "busquedaProducto.html")
+
+def buscar(req: HttpRequest):
+
+    if req.GET["bodega"]:
+        bodega = req.GET["bodega"]
+        productob = Productos.objects.filter(bodega__icontains = bodega)
+        return render(req, "resultadoBusqueda.html", {"bodega": productob})
+
+    else:
+        return HttpResponse (f'no existe..')

@@ -1,0 +1,17 @@
+{% extends 'padre.html' %}
+
+
+{% block tituloCambia %}
+<title>Busqueda Producto</title>
+{% endblock tituloCambia %}
+
+{% block contenidoQueCambia %}
+
+    <form action="{% url 'buscar' %}" method="get">
+        <p>bodega: <input type="text" name="bodega"></p>
+
+        <button type="submit"> Enviar </button>
+    </form>
+
+
+{% endblock contenidoQueCambia %}

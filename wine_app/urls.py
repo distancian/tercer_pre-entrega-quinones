@@ -1,6 +1,6 @@
 
 from django.urls import path
-from wine_app.views import cliente, vendedor, producto, listar_clientes, listar_productos, listar_vendedores, inicio, agregar_producto, agregar_cliente, agregar_vendedor
+from wine_app.views import cliente, buscar, busquedaProducto, vendedor, producto, listar_clientes, listar_productos, listar_vendedores, inicio, agregar_producto, agregar_cliente, agregar_vendedor
 
 urlpatterns = [
     path('agrega-cliente/<nombre>/<apellido>/<dni>/<mail>', cliente),
@@ -12,6 +12,8 @@ urlpatterns = [
     path('agregar_producto', agregar_producto, name='agregar_producto'),
     path('agregar_cliente', agregar_cliente, name='agregar_cliente'),
     path('agregar_vendedor', agregar_vendedor, name='agregar_vendedor'),
+    path('busquedaProducto', busquedaProducto, name='busquedaProducto'),
+    path('buscar', buscar, name='buscar'),
     path('inicio', inicio, name='inicio'),
 
 ]

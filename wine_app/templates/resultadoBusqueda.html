@@ -1,0 +1,24 @@
+{% extends 'padre.html' %}
+
+
+{% block tituloCambia %}
+<title>Resultado busqueda</title>
+{% endblock tituloCambia %}
+
+{% block contenidoQueCambia %}
+    <p> Resultados de la busqueda: </p>
+    {% if bodega %}
+        <ul>
+            {% for bod in bodega %}
+                <li> {{bod}} </li>
+            {% endfor %}
+        </ul>
+    {% endif %}    
+
+
+{% endblock contenidoQueCambia %}
+
+
+
+
+
