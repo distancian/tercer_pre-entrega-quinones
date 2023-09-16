@@ -1,7 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
 
+
+    
+    
+    </html>
+        <head>
+
+        </style>
         {% load static %}
 
         <meta charset="utf-8" />
@@ -23,13 +29,10 @@
     <body>
         {% include 'navbar.html'%}
         <!-- Header-->
-        <header class="bg-dark py-5">
-            <div class="container px-4 px-lg-5 my-5">
-                <div class="text-center text-white">
-                    <h1 class="display-4 fw-bolder">Wine App</h1>
-                </div>
-            </div>
-        </header>
+        {% block cambioCenter %}
+
+
+        {% endblock cambioCenter %}
 
         {% block contenidoQueCambia %}
 
@@ -37,7 +40,7 @@
         <!-- Section-->
         
         <!-- Footer-->
-        <footer class="footer bg-light">
+        <footer class="footer bg-light" style="position: relative;">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-6 h-100 text-center text-lg-start my-auto">
