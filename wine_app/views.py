@@ -89,6 +89,7 @@ def listar_vendedores(req):
 def busquedaProducto(req):
     return render (req, "busquedaProducto.html")
 
+
 def buscar(req: HttpRequest):
 
     if req.GET["bodega"]:
@@ -98,3 +99,9 @@ def buscar(req: HttpRequest):
 
     else:
         return HttpResponse (f'no existe..')
+    
+################### funciones listar  #########################
+ 
+def listarVendedores(req):
+    Vendedor = Vendedores.objects.all
+    return render(req, "listarVendedores.html", {"Vendedores" : Vendedor})
